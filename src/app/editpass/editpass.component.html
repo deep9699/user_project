@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="form-group">
+     <h4>Email Id:</h4> <input class="form-control" type="text" [(ngModel)]="email_id">
+    </div>
+    <div class="form-group">
+      <h4>Old Password:</h4> <input class="form-control" type="text" [(ngModel)]="oldpassword">
+     </div>
+     
+  
+    <div class="form-group" >
+        <h4>New Password:</h4> <input class="form-control" type="text" [(ngModel)]="newpassword">
+    </div>
+  
+    <div class="form-group" >
+        <h4>Confirm Password:</h4> <input class="form-control" type="text" [(ngModel)]="confirmpassword">
+    </div>
+    <div class="form-group">
+      
+        <div class="form-group">
+            <button (click)="onclickok()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: cornflowerblue;font-size: 20px;">Ok!</button>
+            <button (click)="onclickCancel()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: whitesmoke;font-size: 20px;">Back</button>
+          </div>
+  
+    </div>
+  </div>

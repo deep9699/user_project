@@ -1,0 +1,33 @@
+<div>
+  <div class="container">
+    <b style="font-size: 50px;">Log In Application</b>
+
+  </div>
+  <div class="container">
+    <div class="form-group">
+      <h4>Email Id :</h4>
+      <input class="form-control" type="text" [(ngModel)]="email_id">
+    </div>
+
+    <div class="form-group">
+      <h4>Password :</h4>
+      <input class="form-control" type="text" [(ngModel)]="password">
+    </div>
+
+
+    <div class="form-group">
+      <button (click)="onclicklogin()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: cornflowerblue;font-size: 20px;">Log In</button>
+      <button (click)="onclickCancel()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: whitesmoke;font-size: 20px;">Cancel</button>
+    </div>
+
+
+    <div class="form-group">
+      <a style="margin-left: 800px;font-size: 20px;" (click)='onclickforgot()'>Forgot password?</a>
+      <a style="margin-left: 60px;font-size: 20px;" (click)='onclicknew()'>New User?</a>
+    </div>
+    <div class="form-group">
+
+    </div>
+
+  </div>
+</div>  
