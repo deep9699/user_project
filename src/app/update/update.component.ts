@@ -25,12 +25,17 @@ onsave()
   this._ser.updateUsermod(this.email_id,new user_mod(this.email_id,this.password,this.user_name,this.mobile_no,this.city,this.gender,this.address)).subscribe(
     (data:any[])=>
     {
-      this._route.navigate(['viewuser',this.email_id]);
+      this._route.navigate(['pro']);
     }
   );
 }
+onback()
+{
+  this._route.navigate(['pro']);
+}
 
-  ngOnInit(){ this.email_id=this._actrouter.snapshot.params['id'];
+  ngOnInit(){ 
+    this.email_id=localStorage.getItem('email_id');
   this._ser.getAllUsermodById(this.email_id).subscribe(
     (data:user_mod[])=>
     {

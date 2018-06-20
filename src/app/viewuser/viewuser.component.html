@@ -1,31 +1,28 @@
+<app-menu></app-menu>
 <div class="container">
-  <div class="form-group">
-   <h4>Email Id:</h4> <input class="form-control" type="text" [(ngModel)]="email_id">
+    <div class="container">
+        <b style="font-size: 50px;">Profile</b>
+    
+      </div>
+    
+    <div class="form-group">
+   <h4>Email Id:</h4> <input class="form-control" type="text" [(ngModel)]="email_id" disabled>
   </div>
   
   <div class="form-group">
-      <h4>Password:</h4> <input class="form-control" type="text" [(ngModel)]="password">
+      <h4>User_name:</h4> <input class="form-control" type="text" [(ngModel)]="user_name" disabled>
   </div>
   
   <div class="form-group">
-      <h4>User_name:</h4> <input class="form-control" type="text" [(ngModel)]="user_name">
-  </div>
-  
-  <div class="form-group">
-      <h4>Mobile_no:</h4> <input class="form-control" type="text" [(ngModel)]="mobile_no">
+      <h4>Mobile_no:</h4> <input class="form-control" type="text" [(ngModel)]="mobile_no" disabled>
   </div>
   
    <div class="form-group">
-    <h4>city:</h4> <input class="form-control" type="text" [(ngModel)]="city">
+    <h4>city:</h4> <input class="form-control" type="text" [(ngModel)]="city" disabled>
   </div>
   <div class="form-group">
-    <h4>Gender:</h4> <input class="form-control" type="text" [(ngModel)]="gender">
+    <h4>Gender:</h4> <input class="form-control" type="text" [(ngModel)]="gender" disabled>
 </div>
 <div class="form-group">
-  <h4>Address:</h4> <input class="form-control" type="text" [(ngModel)]="address">
-</div>
-<div class="form-group">
-    <button (click)="onback()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: cornflowerblue;font-size: 20px;">Back</button>
-    <button (click)="onup()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: cornflowerblue;font-size: 20px;">Update</button>
-    <button (click)="onpass()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: cornflowerblue;font-size: 20px;">Edit Password</button>
+  <h4>Address:</h4> <input class="form-control" type="text" [(ngModel)]="address" disabled>
 </div>

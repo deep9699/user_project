@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { user_mod } from './user_mod';
+import { product_mod } from './product_mod';
+import { cat_mod } from './cat_mod';
+import { cat_pro_mod } from './cat_pro_mod';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +13,9 @@ import { user_mod } from './user_mod';
 export class UsermodService {
 private url:string='http://localhost:3000/usermod/';
 private url1:string='http://localhost:3000/usermod1/';
+private url2:string='http://localhost:3000/cat/';
+private url3:string='http://localhost:3000/pro/';
+private url4:string='http://localhost:3000/catpro/';
   constructor(private _http:HttpClient) { }
   getUsermodLogin(item:user_mod){
     let body=JSON.stringify(item);
@@ -36,5 +44,24 @@ private url1:string='http://localhost:3000/usermod1/';
     let head1=new HttpHeaders().set('Content-Type','application/json');
     return this._http.put(this.url,body,{headers:head1});
   }
-
+  getAllCat()
+  {
+    return this._http.get(this.url2);
+  }
+  getAllPro()
+  {
+    return this._http.get(this.url3);
+  }
+  getProByCat(cat_name)
+  {
+    return this._http.get(this.url3+cat_name);
+  }
+  getProById(p_id)
+  {
+    return this._http.get(this.url2+p_id);
+  }
+  getProByCatId(cat_id)
+  {
+    return this._http.get(this.url4+cat_id);
+  }
 }

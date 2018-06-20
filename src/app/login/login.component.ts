@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 arr:user_mod[]=[];
 email_id:string;
 password:string;
+
   constructor(private _ser:UsermodService,private _router:Router) { }
   onclicklogin()
   {
@@ -20,9 +21,10 @@ password:string;
       (data:any[])=>
       {
         console.log(data);
-        if(data.length>0)
+        if(data.length==1)
         {
-          this._router.navigate(['/viewuser',this.email_id]);
+          localStorage.setItem('email_id',this.email_id);
+          this._router.navigate(['/pro']);
         }
         else
         {

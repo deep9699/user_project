@@ -34,7 +34,7 @@ export class ViewuserComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.email_id = this._actrouter.snapshot.params['id'];
+    this.email_id =localStorage.getItem('email_id');
     this._ser.getAllUsermodById(this.email_id).subscribe(
       (data: user_mod[]) => {
         console.log(data);

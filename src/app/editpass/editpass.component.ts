@@ -19,8 +19,16 @@ export class EditpassComponent implements OnInit {
   arr:user_mod[]=[];
   constructor(private _router:Router,private _ser:UsermodService,private _actrouter:ActivatedRoute) { }
 
+  onclickcancel()
+  {
+    this._router.navigate(['pro']);
+  }
  onclickok()
  {
+   if(this.oldpassword!='' && this.newpassword!='' && this.confirmpassword!='')
+   {
+
+   
    if(this.oldpassword==this.arr[0].password)
    {
      if(this.newpassword==this.confirmpassword)
@@ -28,14 +36,27 @@ export class EditpassComponent implements OnInit {
        this._ser.updatepass(new user_mod(this.email_id,this.newpassword)).subscribe(
          (data)=>
          {
-           this._router.navigate(['viewuser',this.email_id]);
+           this._router.navigate(['pro']);
          }
        );
      }
+     else
+     {
+       alert('new password and confirm password must- be same');
+     }
    }
+   else
+   {
+     alert('incorrect old password');
+   }
+  }
+  else
+  {
+    alert('pls fill all the fields');
+  }
  }
   ngOnInit() {
-    this.email_id=this._actrouter.snapshot.params['id'];
+    this.email_id=localStorage.getItem('email_id');
     this._ser.getAllUsermodById(this.email_id).subscribe(
       (data:any[])=>
       {

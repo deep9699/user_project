@@ -10,6 +10,9 @@ import { ForgetComponent } from './forget/forget.component';
 import { SignupComponent } from './signup/signup.component';
 import { UpdateComponent } from './update/update.component';
 import { EditpassComponent } from './editpass/editpass.component';
+import { ProductComponent } from './product/product.component';
+import { MenuComponent } from './menu/menu.component';
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { EditpassComponent } from './editpass/editpass.component';
     ForgetComponent,
     SignupComponent,
     UpdateComponent,
-    EditpassComponent
+    EditpassComponent,
+    ProductComponent,
+    MenuComponent,
+    ViewproductComponent
   ],
   imports: [
     BrowserModule,

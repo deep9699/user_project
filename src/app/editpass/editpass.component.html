@@ -1,6 +1,7 @@
+<app-menu></app-menu>
 <div class="container">
     <div class="form-group">
-     <h4>Email Id:</h4> <input class="form-control" type="text" [(ngModel)]="email_id">
+     <h4>Email Id:</h4> <input class="form-control" type="text" [(ngModel)]="email_id" disabled>
     </div>
     <div class="form-group">
       <h4>Old Password:</h4> <input class="form-control" type="text" [(ngModel)]="oldpassword">
@@ -18,7 +19,7 @@
       
         <div class="form-group">
             <button (click)="onclickok()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: cornflowerblue;font-size: 20px;">Ok!</button>
-            <button (click)="onclickCancel()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: whitesmoke;font-size: 20px;">Back</button>
+            <button (click)="onclickcancel()" style="width: 20%;height: 50px;margin-left: 20px;border-radius: 2px;background-color: whitesmoke;font-size: 20px;">Back</button>
           </div>
   
     </div>
