@@ -25,6 +25,7 @@ export class ViewproductComponent implements OnInit {
   color: string = '';
   price: number;
   desc: string = '';
+  c_id:number;
 
   onlclickpro(p_id) {
      this.p_id = p_id;
@@ -39,9 +40,10 @@ export class ViewproductComponent implements OnInit {
         this.color = data[0].p_color;
         this.price = data[0].p_price;
         this.desc = data[0].p_desc;
-        this._ser.getProByCatId(data[0].fkcat_id).subscribe(
-          (data: cat_pro_mod[]) => {
-            this.cat_pro_arr = data;
+        this.c_id=data[0].fkcat_id;
+        this._ser.getProByCatId(this.c_id,this.p_id).subscribe(
+          (data:product_mod[]) => {
+            this.pro_arr = data;
           }
         );
         }
@@ -69,15 +71,17 @@ export class ViewproductComponent implements OnInit {
         this.color = data[0].p_color;
         this.price = data[0].p_price;
         this.desc = data[0].p_desc;
-        this._ser.getProByCatId(data[0].fkcat_id).subscribe(
-          (data: cat_pro_mod[]) => {
-            this.cat_pro_arr = data;
+        this.c_id=data[0].fkcat_id;
+        this._ser.getProByCatId(this.c_id,this.p_id).subscribe(
+          (data:product_mod[]) => {
+            this.pro_arr = data;
           }
         );
 
 
       }
     );
+
   }
 
 }

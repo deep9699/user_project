@@ -60,8 +60,8 @@ private url4:string='http://localhost:3000/catpro/';
   {
     return this._http.get(this.url2+p_id);
   }
-  getProByCatId(cat_id)
+  getProByCatId(c_id,p_id)
   {
-    return this._http.get(this.url4+cat_id);
+    return this._http.get(this.url4+c_id+'/'+p_id);
   }
 }
